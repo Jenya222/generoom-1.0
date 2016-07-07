@@ -1,0 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/********Description*****************/
+.description .wrap .caption {
+  margin-right: 15px;
+  height: 100px;
+  background-color: black; }

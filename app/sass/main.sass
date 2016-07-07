@@ -1,0 +1,507 @@
+@import "bourbon"
+@import "vars.sass"	
+//index.html	
+//rooms
+.description
+	color: #000
+	.images
+		margin-top: 24px
+	h2
+		text-align: center
+		padding-top: 90px
+		padding-bottom: 90px
+		text-transform: uppercase
+		font: 30px "RobotoBold", sans-serif
+	.icon	
+		width: 43px
+		height: 43px
+		background-color: $accent-color
+		i 
+			font-size: 27px
+			color: #fff
+			padding-left: 8px
+			padding-top: 8px
+		i.fa-clock-o,.fa-smile-o
+			font-size: 31px
+			padding-left: 9px
+			padding-top: 5px
+	.tasks
+		text-transform: uppercase
+		font: 16px "RobotoBold", sans-serif
+		padding: 20px 0 
+	.caption
+		padding-bottom: 40px
+		color: lighten(#000, 50%)
+//description
+.rooms
+	.wrapper
+		display: flex
+		flex-flow: row wrap
+		.row
+			margin-left: 0
+			margin-right: 0
+		.title
+			flex: 1 100%
+			background-color: #ebf2f6
+			h2
+				text-align: center
+				padding-top: 86px
+				padding-bottom: 110px
+				text-transform: uppercase
+				font: 30px "RobotoBold", sans-serif	
+				color: #000
+				margin: 0
+		.rooms-content
+			flex: 1 50%
+			background-color: #0c1013
+			padding: 88px 55px 84px 55px
+			.intro
+				color: #fff
+				text-align: left
+				padding-bottom: 35px
+				text-transform: uppercase
+				font: 25px "RobotoBold", sans-serif
+			.caption
+				padding-bottom: 65px
+			.settings
+				margin-bottom: 50px
+				span
+					margin-right: 22px
+					margin-left: 15px
+			.button
+				display: inline-block
+				color: #fff
+				text-decoration: none
+				text-transform: uppercase
+				background-color: $accent-color
+				width: 193px
+				height: 43px
+				line-height: 2.9
+				text-align: center
+			.col-lg-6.col-md-6.col-sm-12.col-xs-12
+				padding-left: 0
+				padding-right: 0
+				margin: 0
+		.images
+			flex: 1 50%
+			background-color: #b4b4b4	
+			min-height: 480px
+.reviews
+	.images
+		margin-top: 88px
+	.wrap-content
+		margin-top: 128px
+		color: #000
+		.head
+			font: 30px "RobotoBold", sans-serif
+			text-transform: uppercase
+			color: $accent-color
+			span 
+				color: #000
+		.intro
+			font: 15px "RobotoBold", sans-serif
+		.content
+			color: lighten(#000, 40%)
+		.name
+			font: 15px "RobotoBold", sans-serif
+			text-transform: uppercase
+		.control
+			padding-left: 0
+			margin-top: 91px
+			.left,.right
+				width: 36px
+				height: 36px
+				background-color: $accent-color
+				float: left
+				cursor: pointer
+				color: #fff
+				text-align: center
+				line-height: 2.1
+				&:active
+					background-color: #000
+			.right
+				margin-left: 15px
+	.wrapper
+		display: flex 
+		flex-flow: row wrap 
+		color: #fff
+		background-color: #1f2225
+		.counter
+			order: 1 
+			flex: 1 25%
+			width: 360px
+			height: 200px
+			text-align: center
+			.num
+				display: inline-block
+				box-sizing: border-box
+				font-size: 34px
+				padding-right: 12px
+				margin-top: 80px
+			.caption
+				text-transform: uppercase
+				color: darken(#fff, 40%)
+				font-size: em(12px)
+		.movie
+			order: 2
+			flex: 1 100%
+.price
+	background-color: #ebf2f6
+	color: #000
+	.title
+		text-align: center
+		padding: 91px
+		h2
+			text-align: center
+			text-transform: uppercase
+			font: 30px "RobotoBold", sans-serif	
+			margin: 0
+	.item
+		width: 351px
+		height: 530px
+		display: flex 
+		flex-direction: column
+		background-color: #FFF
+		margin-bottom: 130px
+		span 
+			display: inline-block
+			width: 100%
+			text-align: center
+		.for
+			background-color: #1f2225
+			color: #fff
+			text-transform: uppercase
+			font-family: "RobotoBold", sans-serif
+			.fline
+				padding-top: 47px 
+			.twline
+				padding-bottom: 43px
+				color: darken(#fff, 40%)
+				font: 11px "RobotoRegular", sans-serif
+		.cost
+			.fline
+				padding-top: 70px 
+				font-size: 40px
+
+			.twline
+				font: 11px "RobotoRegular", sans-serif
+				text-transform: uppercase
+		.caption
+			padding: 53px 40px 0 40px
+			color: lighten(#000, 40%)
+			font-size: 13px
+			text-align: center
+		.order
+			margin-top: 90px 
+			margin-bottom: 50px
+			padding: 0 80px
+			.button
+				display: inline-block
+				color: #fff
+				text-decoration: none
+				text-transform: uppercase
+				background-color: $accent-color
+				width: 193px
+				height: 43px
+				line-height: 2.9
+				text-align: center
+		&:hover
+			@include animation-name(width, height)
+			@include animation-duration(2s)
+			@include animation-timing-function(ease)
+			@include animation-iteration-count(infinite)
+.news
+	background-color: #090c0e
+	color: #fff
+	.title
+		text-align: center
+		padding: 91px
+		h2
+			text-align: center
+			text-transform: uppercase
+			font: 30px "RobotoBold", sans-serif	
+			margin: 0
+	.item 
+		width: 350px
+		height: 480px
+		display: flex 
+		flex-flow: row wrap 
+		.images 
+			flex: 1 100%
+			background-color: #eee
+			width: 300px
+			height: 187px
+		.date 
+			flex: 1 auto
+			width: 50px
+			height: 70px
+			background-color: $accent-color
+			margin-right: 29px
+			text-align: center
+		.item-head 
+			flex: 4 auto
+			width: 270px
+			height: 70px
+			border-bottom: 1px solid darken(#fff, 30%)
+			text-align: left
+			text-transform: uppercase
+		.item-caption 
+			font-size: 13px
+			color: darken(#fff, 30%)
+		.options
+			font-size: 13px
+			color: darken(#fff, 30%)
+			span 
+				padding-right: 20px
+			i 
+			 padding-right: 8px
+	.all-post
+		display: flex 
+		flex-flow: row wrap
+		justify-content: center
+		.button
+			display: inline-block
+			color: #fff
+			text-decoration: none
+			text-transform: uppercase
+			background-color: $accent-color
+			width: 193px
+			height: 43px
+			line-height: 2.9
+			text-align: center
+			margin-top: 91px  
+			margin-bottom: 123px 
+footer
+	background-color: #1f2225
+	color: darken(#fff, 50%)
+	font: 13px "RobotoRegular", sans-serif
+	.company,.contact,.subscribe,.gallery
+		height: 258px
+		width: 255px
+	.fline
+		margin-bottom: 39px
+		margin-top: 60px
+		color: #fff
+		font: 13px "OpenSansSemibold", sans-serif
+	.company
+		.fline
+			width: 100%
+		.twline
+			float: left
+	.contact
+		.twline
+			span 
+				display: inline-block
+				padding-bottom: 28px
+			i 
+				padding-right: 15px
+	.gallery
+		.photo
+			width: 75px
+			height: 75px
+			background-color: #eee
+			margin-bottom: 15px
+			&:hover
+				background-color: $accent-color
+				cursor: pointer
+	.line
+		border-top: $BorderGreyColor
+		.wrap 
+			margin: 37px 0 60px 0
+			&:after 
+				content: ""
+				display: table
+				clear: both
+			.icon
+				background-color: #16181a
+				width: 40px
+				height: 40px
+				border-radius: 20px
+				float: right
+				margin-left: 15px
+				&:hover
+					background-color: #2e3337
+					color: #fff
+				i 
+					font-size: 17px
+					line-height: 2.4
+					padding-left: 9px
+				.fa-youtube
+					padding-left: 12px
+				.fa-facebook,.fa-foursquare
+					padding-left: 14px
+				.fa-instagram
+					padding-left: 13px
+//rooms.html
+.description-rooms
+	color: #000
+	background-color: #ebf2f6
+	h2
+			text-align: left
+			margin-top: 90px
+			padding-bottom: 54px
+			text-transform: uppercase
+			font: 30px "RobotoBold", sans-serif
+	.caption
+		padding-bottom: 56px
+		color: lighten(#000, 50%)
+		margin: 0
+	.intro
+			font: 15px "RobotoBold", sans-serif
+			padding: 20px
+			border-left: 3px solid $accent-color
+			margin-bottom: 90px
+	.item
+		width: 255px
+		height: 395px
+		display: flex 
+		flex-direction: column
+		background-color: #FFF
+		margin: 90px auto
+		span 
+			display: inline-block
+			width: 100%
+			text-align: center
+		.cost
+			background-color: #1f2225
+			color: #fff
+			font-family: "RobotoBold", sans-serif
+			text-align: center
+			line-height: 0.9
+			.fline
+				padding-top: 38px 
+				font-size: 30px
+				text-transform: uppercase
+			.twline
+				padding-top: 10px
+				padding-bottom: 28px
+				color: darken(#fff, 40%)
+				font: 11px "RobotoRegular", sans-serif
+		.settings
+			font: 13px "OpenSansSemibold", sans-serif
+			span 
+				display: inline-block
+				padding-top: 35px
+			i 
+				font-size: 24px
+				color: $accent-color
+				padding-right: 16px
+		.people
+			font: 11px "RobotoRegular", sans-serif
+		.order
+			margin: 35px 31px
+			.button
+				display: inline-block
+				color: #fff
+				text-decoration: none
+				text-transform: uppercase
+				background-color: $accent-color
+				width: 193px
+				height: 43px
+				line-height: 2.9
+				text-align: center
+//rooms.html-location
+.location 
+	height: 460px
+	background-color: #1f2225
+	#map 
+		width: 100%
+		height: 460px
+//rooms.html-booking	
+.booking 
+	.topline
+		font: 30px "RobotoBold", sans-serif
+		color: #000
+		text-transform: uppercase
+		letter-spacing: 2px
+		word-spacing: 2px
+		text-align: center
+		.wrap-topline
+			margin: 90px 28%
+			width: 500px
+			.month	
+				float: left
+				margin: 0 81px 
+			.nav-prev,.nav-next
+				width: 36px
+				height: 36px
+				border: 1px solid #000
+				display: inline-block
+				float: left
+				cursor: pointer
+				line-height: 0.7
+				&:hover
+					background-color: #1f2225
+					color: #fff
+				i 
+					font-size: 13px
+	.row-week
+		.dayweek
+			color: #000
+			position: absolute
+			top: 70px	
+			left: -2% 
+
+		.element
+			padding: 0
+			margin-top: 17px
+			margin-right: 17px
+			width: auto
+			&:last-child
+				margin-right: 0
+			.sheet-normal 
+				border: 4px solid #ebf2f6
+				width: 143px
+				height: 143px
+				.date
+					font: 25px "RobotoRegular", sans-serif
+					margin: 20px 40%
+					color: #000
+				.avail 
+					font: 13px "RobotoRegular", sans-serif
+					text-align: center
+					color: lighten(#000, 40%)
+				.order 
+					.button
+						font: 11px "RobotoRegular", sans-serif
+						display: inline-block
+						color: #fff
+						text-decoration: none
+						text-transform: uppercase
+						background-color: #1f2225
+						width: 111px
+						height: 30px
+						text-align: center
+						margin: 4% 9%
+						line-height: 2.6
+						border-radius: 1px
+						&:hover
+							background-color: $accent-color
+			.sheet-nextmonth		
+				background-color: #ebf2f6
+				border: 4px solid #ebf2f6
+				width: 143px
+				height: 143px
+				.date
+					font: 25px "RobotoRegular", sans-serif
+					margin: 20px 40%
+					color: darken(#fff, 20%)
+				.avail 
+					display: none
+				.order 
+					display: none
+			.sheet-notavail
+				border: 4px solid #ebf2f6
+				width: 143px
+				height: 143px
+				.date
+					font: 25px "RobotoRegular", sans-serif
+					margin: 20px 40%
+					color: #000
+				.avail 
+					font: 13px "RobotoRegular", sans-serif
+					text-align: center
+					color: $accent-color
+					padding-top: 27px 
+				.order 
+					display: none

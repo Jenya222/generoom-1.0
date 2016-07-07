@@ -1,0 +1,348 @@
+@import "bourbon"
+@import "vars.sass"
+@import "../css/fonts.css"
+@import "../css/bootstrap.min.css"
+@import "../css/owl.carousel.css"
+@import "../css/owl.theme.default.css"
+@import "../css/slicknav.min.css"
+
+*
+	box-sizing: border-box
+
+body 
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+	color: #fff
+	height: 100%
+
+.hidden
+		display: none
+
+.clearfix
+	content: "";
+	display: table;
+	clear: both;
+strong, b
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal
+h1, h2, h3, h4, h5, h6 
+	font-family: "RobotoCondensedRegular", sans-serif
+	text-transform: uppercase
+
+.main-head
+	background-color: $main-color
+	position: absolute
+	z-index: 3
+	opacity: 0.75
+	width: 100%
+.logo
+	float: left
+	max-width: 200px
+	min-width: 50px
+	height: 80.8px
+	background-color: red
+	width: 100%
+	border-right: $BorderGreyColor
+
+.top-line
+	float: right
+	text-align: right
+	font-family: "OpenSansSemibold", sans-serif
+	font-weight: normal
+	font-size: em(13px)
+	text-transform: uppercase
+	margin-right: 160px
+	border-bottom: $BorderGreyColor
+	a
+		color: #fff
+		text-decoration: none
+					
+	ul, li 
+		list-style-type: none
+		margin: 0
+	li
+		display: inline-block
+		padding: 30px 25px
+		border-right: 1px solid $main-color
+		border-left: 1px solid $main-color
+		&:hover
+			//background-color: lighten($main-color, 4%)
+			//border-right: $BorderGreyColor
+			//border-left: $BorderGreyColor
+			color: $accent-color
+			
+button
+	font-family: "RobotoRegular", sans-serif
+	font-size: 13px
+	text-transform: uppercase
+
+.scroll-down
+	font-family: "OpenSansRegular", sans-serif
+	font-size: 13px
+	text-transform: uppercase
+
+.main-slider	
+	color: #fff
+	position: relative
+	top: 0
+	width: 100%
+	overflow: hidden
+	.owl-carousel
+		position: relative
+		margin: 0
+		.owl-stage-outer
+			position: relative
+			overflow: hidden
+			z-index: 3
+			.owl-stage
+				.owl-item
+					min-height: 500px
+					.item
+						background-size: cover
+						height: 100%
+						width: 100%
+						.slider-wrap
+							position: relative
+							width: inherit
+							height: inherit
+							.slider-caption
+								padding-top: 15%
+								.wrapper
+									display: flex 
+									flex-flow: row wrap 
+									justify-content: center
+								.slider-text
+									margin: 0 2% 2% 1%
+									text-align: center
+									font-size: em(40px)
+								.slider-button
+									a
+										display: inline-block
+										color: #fff
+										text-decoration: none
+										text-transform: uppercase
+										background-color: $accent-color
+										width: 220px
+										height: 43px
+										line-height: 2.9
+										text-align: center
+
+	
+		.owl-controls
+			position: relative
+			z-index: 4
+			bottom: 400px
+			left: 0px
+			width: inherit
+			height: inherit
+			.owl-nav
+				width: inherit
+				height: inherit
+				.owl-prev,.owl-next
+					border-radius: inherit
+					background-color: $accent-color
+					margin: 0
+					padding: 0
+					width: 35px
+					height: 60px
+					&:active
+						background-color: $BlockLightColor
+					i 
+						zoom: 1.5
+						line-height: 2.8
+
+					&:active
+						color: #000					
+				.owl-prev
+					position: absolute
+					top: 65%
+					z-index: 3
+					left: 1px
+				.owl-next
+					position: absolute
+					top: 65%
+					z-index: 3
+					right: 0				
+	.slider-nav
+		position: relative
+		.nav-container
+			position: absolute
+			width: 100%
+			.owl-prev,.owl-next
+				border-radius: inherit
+				background-color: $accent-color
+				margin: 0
+				padding: 0
+				width: 35px
+				height: 60px
+				&:active
+					background-color: $BlockLightColor
+				&:hover
+					cursor: pointer
+				i 
+					zoom: 1.5
+					line-height: 2.5
+					padding-left: 8px
+				&:active
+					color: #000					
+			.owl-prev
+				position: absolute
+				top: 370px
+				z-index: 3
+				left: 0
+			.owl-next
+				position: absolute
+				top: 370px
+				z-index: 3
+				right: 0			
+		.owl-dots-container
+			position: absolute
+			width: 100%
+			.owl-dots
+				position: absolute
+				top: 740px
+				z-index: 3
+				left: 47%
+				.owl-dot
+					float: left
+					span
+						display: inline-block
+						width: 10px
+						height: 10px
+						margin: 7.5px 
+						cursor: pointer
+						border-radius: 15px
+						background: $grey-text-color
+					
+				.owl-dot.active
+					span
+						background: $accent-color		
+					
+						
+//toogle menu
+
+.slicknav_menu 
+	display: none
+
+@media screen and (max-width: 58.125em) 
+	/* #menu is the original menu */
+	.top-line-menu
+		display: none
+	.slicknav_menu 
+		display: block
+		text-align: center
+		font-family: "OpenSansSemibold", sans-serif
+		font-weight: normal
+		font-size: em(13px)
+		text-transform: uppercase
+		border-bottom: $BorderGreyColor
+		background-color: $main-color
+		position: absolute
+		z-index: 5
+		opacity: 0.75
+		width: 100%
+		a
+			color: #fff
+			text-decoration: none
+	.slicknav_btn
+		background-color: darken($main-color, 90%)//сделать цвет accent-color
+	.slicknav_nav 
+		a:hover
+			color: $accent-color
+			background: none		
+	.main-head
+		display: none
+	.main-slider	
+		.dots-container
+			position: absolute
+			bottom: 20%
+			z-index: 3
+			left: 40%
+	.main-slider
+		.slider-nav
+			.nav-container		
+				.owl-prev
+					position: absolute
+					top: 240px
+					z-index: 3
+					left: 0
+				.owl-next
+					position: absolute
+					top: 240px
+					z-index: 3
+					right: 0		
+			.owl-dots-container
+				.owl-dots
+					position: absolute
+					top: 640px
+					z-index: 3
+					left: 47%
+@media screen and (min-width: 600px) 
+	.main-slider
+		.slider-nav
+			.nav-container		
+				.owl-prev
+					position: absolute
+					top: 220px
+					z-index: 3
+					left: 0
+				.owl-next
+					position: absolute
+					top: 220px
+					z-index: 3
+					right: 0
+	.rooms 
+		.wrapper
+			.rooms-content
+				flex: 1 100%
+				background-color: #0c1013
+				padding: 88px 55px 84px 55px
+			.images					
+				flex: 1 100%
+				background-color: #b4b4b4	
+				min-height: 480px
+@media screen and (min-width: 1000px) 
+	.main-slider
+		.slider-nav
+			.nav-container		
+				.owl-prev
+					position: absolute
+					top: 340px
+					z-index: 3
+					left: 0
+				.owl-next
+					position: absolute
+					top: 340px
+					z-index: 3
+					right: 0		
+			.owl-dots-container
+				.owl-dots
+					position: absolute
+					top: 550px
+					z-index: 3
+					left: 47%		
+@media screen and (min-width: 1500px) 
+	.main-slider
+		.slider-nav
+			.nav-container		
+				.owl-prev
+					position: absolute
+					top: 470px
+					z-index: 3
+					left: 0
+				.owl-next
+					position: absolute
+					top: 470px
+					z-index: 3
+					right: 0		
+			.owl-dots-container
+				.owl-dots
+					position: absolute
+					top: 740px
+					z-index: 3
+					left: 47%	
+				
