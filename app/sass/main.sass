@@ -409,6 +409,7 @@ footer
 		height: 460px
 //rooms.html-booking	
 .booking 
+	margin-bottom: 141px
 	.topline
 		font: 30px "RobotoBold", sans-serif
 		color: #000
@@ -435,73 +436,273 @@ footer
 					color: #fff
 				i 
 					font-size: 13px
-	.row-week
-		.dayweek
-			color: #000
-			position: absolute
-			top: 70px	
-			left: -2% 
-
-		.element
-			padding: 0
-			margin-top: 17px
-			margin-right: 17px
-			width: auto
-			&:last-child
-				margin-right: 0
-			.sheet-normal 
-				border: 4px solid #ebf2f6
-				width: 143px
-				height: 143px
-				.date
-					font: 25px "RobotoRegular", sans-serif
-					margin: 20px 40%
-					color: #000
-				.avail 
-					font: 13px "RobotoRegular", sans-serif
+	.week 
+		width: 143px
+		height: 40px
+		color: #000
+		margin-right: 17px
+		text-align: center
+		text-transform: uppercase
+		font: 11px "RobotoRegular", sans-serif
+		&.end 
+			color: $accent-color
+	.element
+		padding: 0
+		margin-top: 17px
+		margin-right: 17px
+		width: auto
+		&:last-child
+			margin-right: 0
+		.sheet-normal 
+			border: 4px solid #ebf2f6
+			width: 143px 
+			height: 143px 
+			.date
+				font: 25px "RobotoRegular", sans-serif
+				margin: 20px 40%
+				color: #000
+			.avail 
+				font: 13px "RobotoRegular", sans-serif
+				text-align: center
+				color: lighten(#000, 40%)
+			.order 
+				.button
+					font: 11px "RobotoRegular", sans-serif
+					display: inline-block
+					color: #fff
+					text-decoration: none
+					text-transform: uppercase
+					background-color: #1f2225
+					width: 111px
+					height: 30px
 					text-align: center
-					color: lighten(#000, 40%)
-				.order 
-					.button
-						font: 11px "RobotoRegular", sans-serif
-						display: inline-block
-						color: #fff
-						text-decoration: none
-						text-transform: uppercase
-						background-color: #1f2225
-						width: 111px
-						height: 30px
-						text-align: center
-						margin: 4% 9%
-						line-height: 2.6
-						border-radius: 1px
-						&:hover
-							background-color: $accent-color
-			.sheet-nextmonth		
-				background-color: #ebf2f6
-				border: 4px solid #ebf2f6
-				width: 143px
-				height: 143px
+					margin: 4% 9%
+					line-height: 2.6
+					border-radius: 1px
+					&:hover
+						background-color: $accent-color
+		.sheet-nextmonth		
+			background-color: #ebf2f6
+			border: 4px solid #ebf2f6
+			width: 143px
+			height: 143px
+			.date
+				font: 25px "RobotoRegular", sans-serif
+				margin: 20px 40%
+				color: darken(#fff, 20%)
+			.avail 
+				display: none
+			.order 
+				display: none
+		.sheet-notavail
+			border: 4px solid #ebf2f6
+			width: 143px
+			height: 143px
+			.date
+				font: 25px "RobotoRegular", sans-serif
+				margin: 20px 40%
+				color: #000
+			.avail 
+				font: 13px "RobotoRegular", sans-serif
+				text-align: center
+				color: $accent-color
+				padding-top: 27px 
+			.order 
+				display: none
+//faq.html
+.description-faq
+	color: #1f2225
+	font: 15px	"RobotoBold", sans-serif
+	.question
+		width: 540px
+		height: 60px
+		margin-top: 30px 
+		border: 1px solid darken(#fff, 20%)
+		.question-text
+			padding: 22px
+			margin: 0
+			float: left
+		.open-answer 
+			width: 60px
+			height: 60px
+			float: right
+			border-left: 1px solid darken(#fff, 20%)
+			cursor: pointer
+			i 
+				padding: 23px
+				color: darken(#fff, 40%)
+			.fa-minus
+				display: none
+	.answer	
+		display: none
+		font: 13px "RobotoRegular", sans-serif
+		color: lighten(#000, 50%)
+		width: 540px
+		padding: 22px
+		border: 1px solid darken(#fff, 20%)
+		border-top: none
+//blog.html
+.wrap-blog
+	color: lighten(#1f2225, 40%)
+	margin-top: 90px
+	.title	
+		color: #1f2225
+		font: 16px "RobotoBold", sans-serif
+		text-transform: uppercase
+		margin-bottom: 40px 
+	.item 
+		border-bottom: 1px solid lighten(#1f2225, 70%)
+		width: 100%
+		&:last-child
+			border-bottom: none
+		.theme 
+			float: left
+		.counter
+			float: right
+	.left-sidebar
+		font: 14px "RobotoCondensedRegular", sans-serif
+		width: 255px
+		.search
+			width: 255px
+			height: 40px 
+			background-color: #f6f6f6
+			padding: 10px
+			line-height: 1.7
+			i 	
+				padding-right: 15px
+				color: lighten(#1f2225, 70%)
+		.popular-post
+			margin-top: 60px
+			.ppost
+				margin-bottom: 30px
+				&:last-child
+				 margin-bottom: 0
+				img 
+					width: 65px 
+					height: 65px 
+					background-color: grey 
+					background-repeat: none 
+					background-size: cover 
+					float: left 
+					margin-right: 15px
+				.caption
+					font: 11px "RobotoBold", sans-serif
+					text-transform: uppercase
+					color: #1f2225
 				.date
-					font: 25px "RobotoRegular", sans-serif
-					margin: 20px 40%
-					color: darken(#fff, 20%)
-				.avail 
-					display: none
-				.order 
-					display: none
-			.sheet-notavail
-				border: 4px solid #ebf2f6
-				width: 143px
-				height: 143px
-				.date
-					font: 25px "RobotoRegular", sans-serif
-					margin: 20px 40%
-					color: #000
-				.avail 
-					font: 13px "RobotoRegular", sans-serif
+					font: 11px "RobotoCondensedRegular", sans-serif
+					color: lighten(#1f2225, 60%)
+		.categories 
+			margin-top: 60px	
+		.tags
+			margin-top: 80px
+			.cloud-tag 
+				margin-left: -4px
+				.tag
+					float: left
+					padding: 6px 14px
+					font: 13px "RobotoCondensedRegular", sans-serif
+					border: 1px solid lighten(#1f2225, 80%)
+					margin: 4px
+					cursor: pointer
+					&:hover 
+						border: 1px solid #1f2225
+						color: #1f2225
+		.archive 
+			margin: 60px 0
+	.main 
+		.note
+			max-width: 730px
+			margin-top: 53px
+			&:first-child
+				margin-top: 0
+			&:last-child 
+				margin-bottom: 71px
+			img 	
+				height: 390px
+				max-width: 730px
+				width: 100%
+			.header	
+				margin: 20px 0
+				text-transform: uppercase
+				color: #1f2225
+				width: 100%
+				.date 
+					width: 50px / 730px * 100%
+					height: 70px
+					border: 2px solid lighten(#1f2225, 80%)
 					text-align: center
+					padding-top: 5px
+					float: left
+					.num
+						font: 25px "RobotoBold", sans-serif
+					.month
+						font: 12px "RobotoBold", sans-serif
+				.headline
+					width: 650px / 730px * 100%
+					font: 21px "RobotoBold", sans-serif
+					float: left
+					padding: 20px 0
+					margin-left: 29px / 730px * 100%
+					border-bottom: 1px solid lighten(#1f2225, 70%) 
+			.description
+				color: lighten(#000, 50%)
+			.options
+				font-size: 13px
+				color: darken(#fff, 30%)
+				span 
+					padding-right: 20px
+				i 
+				 padding-right: 8px
+			.read-more
+				font: 13px "RobotoBold", sans-serif
+				color: #1f2225
+				text-transform: uppercase
+				margin-top: 33px 
+				display: inline-block
+				text-decoration: none
+				i 
+					padding-left: 10px
+				&:hover
 					color: $accent-color
-					padding-top: 27px 
-				.order 
-					display: none
+//contact.html
+.contacts
+	color: #1f2225
+	margin: 80px 0 140px 0
+	.form
+		width: 540px
+		height: 100%	
+		.title 
+			font: 30px "RobotoBold", sans-serif
+			text-transform: uppercase
+			margin-bottom: 50px
+		input 
+			border: none
+			border-bottom: 1px solid lighten(#1f2225, 70%)
+			display: inline-block
+			padding: 20px
+			float: left
+			width: 100%
+			outline: none
+			&:focus
+		input[type=submit]
+			display: inline-block
+			color: #fff
+			text-decoration: none
+			text-transform: uppercase
+			background-color: $accent-color
+			width: 193px
+			height: 43px
+			text-align: center
+			margin-top: 40px
+			line-height: 0.1
+		textarea 
+			border: none
+			border-bottom: 1px solid lighten(#1f2225, 70%)
+			display: inline-block
+			padding: 20px
+			float: left
+			width: 100%
+			outline: none
+	.other
+					

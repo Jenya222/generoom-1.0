@@ -53,3 +53,28 @@ $(function(){
 		closeOnClick: true     
 	});
 });
+
+
+   
+ymaps.ready(init);
+var myMap, 
+    myPlacemark;
+
+function init(){ 
+    myMap = new ymaps.Map("map", {
+        center: [59.926938, 30.353089],
+        zoom: 17
+    }); 
+    
+    myPlacemark = new ymaps.Placemark([59.926938, 30.353089], {
+        balloonContent: 'Здесь квест астероид, чтобы записаться на него позвоните Арсению',
+        iconCaption: 'Я тута, пройди меня полностью'
+    },
+    {   hintContent: 'Квест астероид!',
+        preset: 'islands#greenDotIconWithCaption',
+        iconColor: '#fb383c'}
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+
+        }

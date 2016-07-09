@@ -475,99 +475,297 @@ footer {
     width: 100%;
     height: 460px; }
 
-.booking .topline {
-  font: 30px "RobotoBold", sans-serif;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  word-spacing: 2px;
-  text-align: center; }
-  .booking .topline .wrap-topline {
-    margin: 90px 28%;
-    width: 500px; }
-    .booking .topline .wrap-topline .month {
-      float: left;
-      margin: 0 81px; }
-    .booking .topline .wrap-topline .nav-prev, .booking .topline .wrap-topline .nav-next {
-      width: 36px;
-      height: 36px;
-      border: 1px solid #000;
-      display: inline-block;
-      float: left;
-      cursor: pointer;
-      line-height: 0.7; }
-      .booking .topline .wrap-topline .nav-prev:hover, .booking .topline .wrap-topline .nav-next:hover {
-        background-color: #1f2225;
-        color: #fff; }
-      .booking .topline .wrap-topline .nav-prev i, .booking .topline .wrap-topline .nav-next i {
-        font-size: 13px; }
-
-.booking .row-week .dayweek {
-  color: #000;
-  position: absolute;
-  top: 70px;
-  left: -2%; }
-
-.booking .row-week .element {
-  padding: 0;
-  margin-top: 17px;
-  margin-right: 17px;
-  width: auto; }
-  .booking .row-week .element:last-child {
-    margin-right: 0; }
-  .booking .row-week .element .sheet-normal {
-    border: 4px solid #ebf2f6;
+.booking {
+  margin-bottom: 141px; }
+  .booking .topline {
+    font: 30px "RobotoBold", sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-align: center; }
+    .booking .topline .wrap-topline {
+      margin: 90px 28%;
+      width: 500px; }
+      .booking .topline .wrap-topline .month {
+        float: left;
+        margin: 0 81px; }
+      .booking .topline .wrap-topline .nav-prev, .booking .topline .wrap-topline .nav-next {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #000;
+        display: inline-block;
+        float: left;
+        cursor: pointer;
+        line-height: 0.7; }
+        .booking .topline .wrap-topline .nav-prev:hover, .booking .topline .wrap-topline .nav-next:hover {
+          background-color: #1f2225;
+          color: #fff; }
+        .booking .topline .wrap-topline .nav-prev i, .booking .topline .wrap-topline .nav-next i {
+          font-size: 13px; }
+  .booking .week {
     width: 143px;
-    height: 143px; }
-    .booking .row-week .element .sheet-normal .date {
-      font: 25px "RobotoRegular", sans-serif;
-      margin: 20px 40%;
-      color: #000; }
-    .booking .row-week .element .sheet-normal .avail {
-      font: 13px "RobotoRegular", sans-serif;
-      text-align: center;
-      color: #666666; }
-    .booking .row-week .element .sheet-normal .order .button {
-      font: 11px "RobotoRegular", sans-serif;
+    height: 40px;
+    color: #000;
+    margin-right: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    font: 11px "RobotoRegular", sans-serif; }
+    .booking .week.end {
+      color: #fb383c; }
+  .booking .element {
+    padding: 0;
+    margin-top: 17px;
+    margin-right: 17px;
+    width: auto; }
+    .booking .element:last-child {
+      margin-right: 0; }
+    .booking .element .sheet-normal {
+      border: 4px solid #ebf2f6;
+      width: 143px;
+      height: 143px; }
+      .booking .element .sheet-normal .date {
+        font: 25px "RobotoRegular", sans-serif;
+        margin: 20px 40%;
+        color: #000; }
+      .booking .element .sheet-normal .avail {
+        font: 13px "RobotoRegular", sans-serif;
+        text-align: center;
+        color: #666666; }
+      .booking .element .sheet-normal .order .button {
+        font: 11px "RobotoRegular", sans-serif;
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #1f2225;
+        width: 111px;
+        height: 30px;
+        text-align: center;
+        margin: 4% 9%;
+        line-height: 2.6;
+        -webkit-border-radius: 1px;
+                border-radius: 1px; }
+        .booking .element .sheet-normal .order .button:hover {
+          background-color: #fb383c; }
+    .booking .element .sheet-nextmonth {
+      background-color: #ebf2f6;
+      border: 4px solid #ebf2f6;
+      width: 143px;
+      height: 143px; }
+      .booking .element .sheet-nextmonth .date {
+        font: 25px "RobotoRegular", sans-serif;
+        margin: 20px 40%;
+        color: #cccccc; }
+      .booking .element .sheet-nextmonth .avail {
+        display: none; }
+      .booking .element .sheet-nextmonth .order {
+        display: none; }
+    .booking .element .sheet-notavail {
+      border: 4px solid #ebf2f6;
+      width: 143px;
+      height: 143px; }
+      .booking .element .sheet-notavail .date {
+        font: 25px "RobotoRegular", sans-serif;
+        margin: 20px 40%;
+        color: #000; }
+      .booking .element .sheet-notavail .avail {
+        font: 13px "RobotoRegular", sans-serif;
+        text-align: center;
+        color: #fb383c;
+        padding-top: 27px; }
+      .booking .element .sheet-notavail .order {
+        display: none; }
+
+.description-faq {
+  color: #1f2225;
+  font: 15px	"RobotoBold", sans-serif; }
+  .description-faq .question {
+    width: 540px;
+    height: 60px;
+    margin-top: 30px;
+    border: 1px solid #cccccc; }
+    .description-faq .question .question-text {
+      padding: 22px;
+      margin: 0;
+      float: left; }
+    .description-faq .question .open-answer {
+      width: 60px;
+      height: 60px;
+      float: right;
+      border-left: 1px solid #cccccc;
+      cursor: pointer; }
+      .description-faq .question .open-answer i {
+        padding: 23px;
+        color: #999999; }
+      .description-faq .question .open-answer .fa-minus {
+        display: none; }
+  .description-faq .answer {
+    display: none;
+    font: 13px "RobotoRegular", sans-serif;
+    color: gray;
+    width: 540px;
+    padding: 22px;
+    border: 1px solid #cccccc;
+    border-top: none; }
+
+.wrap-blog {
+  color: #7e8893;
+  margin-top: 90px; }
+  .wrap-blog .title {
+    color: #1f2225;
+    font: 16px "RobotoBold", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  .wrap-blog .item {
+    border-bottom: 1px solid #d1d5d8;
+    width: 100%; }
+    .wrap-blog .item:last-child {
+      border-bottom: none; }
+    .wrap-blog .item .theme {
+      float: left; }
+    .wrap-blog .item .counter {
+      float: right; }
+  .wrap-blog .left-sidebar {
+    font: 14px "RobotoCondensedRegular", sans-serif;
+    width: 255px; }
+    .wrap-blog .left-sidebar .search {
+      width: 255px;
+      height: 40px;
+      background-color: #f6f6f6;
+      padding: 10px;
+      line-height: 1.7; }
+      .wrap-blog .left-sidebar .search i {
+        padding-right: 15px;
+        color: #d1d5d8; }
+    .wrap-blog .left-sidebar .popular-post {
+      margin-top: 60px; }
+      .wrap-blog .left-sidebar .popular-post .ppost {
+        margin-bottom: 30px; }
+        .wrap-blog .left-sidebar .popular-post .ppost:last-child {
+          margin-bottom: 0; }
+        .wrap-blog .left-sidebar .popular-post .ppost img {
+          width: 65px;
+          height: 65px;
+          background-color: grey;
+          background-repeat: none;
+          background-size: cover;
+          float: left;
+          margin-right: 15px; }
+        .wrap-blog .left-sidebar .popular-post .ppost .caption {
+          font: 11px "RobotoBold", sans-serif;
+          text-transform: uppercase;
+          color: #1f2225; }
+        .wrap-blog .left-sidebar .popular-post .ppost .date {
+          font: 11px "RobotoCondensedRegular", sans-serif;
+          color: #b5bbc1; }
+    .wrap-blog .left-sidebar .categories {
+      margin-top: 60px; }
+    .wrap-blog .left-sidebar .tags {
+      margin-top: 80px; }
+      .wrap-blog .left-sidebar .tags .cloud-tag {
+        margin-left: -4px; }
+        .wrap-blog .left-sidebar .tags .cloud-tag .tag {
+          float: left;
+          padding: 6px 14px;
+          font: 13px "RobotoCondensedRegular", sans-serif;
+          border: 1px solid #edeef0;
+          margin: 4px;
+          cursor: pointer; }
+          .wrap-blog .left-sidebar .tags .cloud-tag .tag:hover {
+            border: 1px solid #1f2225;
+            color: #1f2225; }
+    .wrap-blog .left-sidebar .archive {
+      margin: 60px 0; }
+  .wrap-blog .main .note {
+    max-width: 730px;
+    margin-top: 53px; }
+    .wrap-blog .main .note:first-child {
+      margin-top: 0; }
+    .wrap-blog .main .note:last-child {
+      margin-bottom: 71px; }
+    .wrap-blog .main .note img {
+      height: 390px;
+      max-width: 730px;
+      width: 100%; }
+    .wrap-blog .main .note .header {
+      margin: 20px 0;
+      text-transform: uppercase;
+      color: #1f2225;
+      width: 100%; }
+      .wrap-blog .main .note .header .date {
+        width: 6.84932%;
+        height: 70px;
+        border: 2px solid #edeef0;
+        text-align: center;
+        padding-top: 5px;
+        float: left; }
+        .wrap-blog .main .note .header .date .num {
+          font: 25px "RobotoBold", sans-serif; }
+        .wrap-blog .main .note .header .date .month {
+          font: 12px "RobotoBold", sans-serif; }
+      .wrap-blog .main .note .header .headline {
+        width: 89.0411%;
+        font: 21px "RobotoBold", sans-serif;
+        float: left;
+        padding: 20px 0;
+        margin-left: 3.9726%;
+        border-bottom: 1px solid #d1d5d8; }
+    .wrap-blog .main .note .description {
+      color: gray; }
+    .wrap-blog .main .note .options {
+      font-size: 13px;
+      color: #b3b3b3; }
+      .wrap-blog .main .note .options span {
+        padding-right: 20px; }
+      .wrap-blog .main .note .options i {
+        padding-right: 8px; }
+    .wrap-blog .main .note .read-more {
+      font: 13px "RobotoBold", sans-serif;
+      color: #1f2225;
+      text-transform: uppercase;
+      margin-top: 33px;
+      display: inline-block;
+      text-decoration: none; }
+      .wrap-blog .main .note .read-more i {
+        padding-left: 10px; }
+      .wrap-blog .main .note .read-more:hover {
+        color: #fb383c; }
+
+.contacts {
+  color: #1f2225;
+  margin: 80px 0 140px 0; }
+  .contacts .form {
+    width: 540px;
+    height: 100%; }
+    .contacts .form .title {
+      font: 30px "RobotoBold", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 50px; }
+    .contacts .form input {
+      border: none;
+      border-bottom: 1px solid #d1d5d8;
+      display: inline-block;
+      padding: 20px;
+      float: left;
+      width: 100%;
+      outline: none; }
+    .contacts .form input[type=submit] {
       display: inline-block;
       color: #fff;
       text-decoration: none;
       text-transform: uppercase;
-      background-color: #1f2225;
-      width: 111px;
-      height: 30px;
+      background-color: #fb383c;
+      width: 193px;
+      height: 43px;
       text-align: center;
-      margin: 4% 9%;
-      line-height: 2.6;
-      -webkit-border-radius: 1px;
-              border-radius: 1px; }
-      .booking .row-week .element .sheet-normal .order .button:hover {
-        background-color: #fb383c; }
-  .booking .row-week .element .sheet-nextmonth {
-    background-color: #ebf2f6;
-    border: 4px solid #ebf2f6;
-    width: 143px;
-    height: 143px; }
-    .booking .row-week .element .sheet-nextmonth .date {
-      font: 25px "RobotoRegular", sans-serif;
-      margin: 20px 40%;
-      color: #cccccc; }
-    .booking .row-week .element .sheet-nextmonth .avail {
-      display: none; }
-    .booking .row-week .element .sheet-nextmonth .order {
-      display: none; }
-  .booking .row-week .element .sheet-notavail {
-    border: 4px solid #ebf2f6;
-    width: 143px;
-    height: 143px; }
-    .booking .row-week .element .sheet-notavail .date {
-      font: 25px "RobotoRegular", sans-serif;
-      margin: 20px 40%;
-      color: #000; }
-    .booking .row-week .element .sheet-notavail .avail {
-      font: 13px "RobotoRegular", sans-serif;
-      text-align: center;
-      color: #fb383c;
-      padding-top: 27px; }
-    .booking .row-week .element .sheet-notavail .order {
-      display: none; }
+      margin-top: 40px;
+      line-height: 0.1; }
+    .contacts .form textarea {
+      border: none;
+      border-bottom: 1px solid #d1d5d8;
+      display: inline-block;
+      padding: 20px;
+      float: left;
+      width: 100%;
+      outline: none; }

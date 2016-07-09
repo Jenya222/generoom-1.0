@@ -78,3 +78,25 @@ function init(){
     myMap.geoObjects.add(myPlacemark);
 
         }
+
+//faq.html answer block
+$(document).ready(function(){
+
+   $(".open-answer>.fa-plus").click(function(){
+      $(this).removeClass("fa-plus")
+      $(this).addClass("fa-minus")
+      $(this).css("display", "block")
+      $(this).change(function(){
+
+      $(".open-answer>.fa-minus").click(function(){
+            $(this).removeClass("fa-minus")
+            $(this).addClass("fa-plus")
+            $(this).parent().parent().next().hide(1000);
+          });
+
+});
+      $(this).parent().parent().next().show(1000);
+
+      });
+
+});
