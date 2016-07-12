@@ -647,6 +647,15 @@ footer
 					border-bottom: 1px solid lighten(#1f2225, 70%) 
 			.description
 				color: lighten(#000, 50%)
+				.important
+					display: inline-block
+					font: 18px "OpenSansSemibold",sans-serif
+					color: #1f2225 
+					font-style: italic
+					border-left: 4px solid lighten(#1f2225, 70%)
+					padding: 24px
+					margin: 40px 0
+					width: 100%
 			.options
 				font-size: 13px
 				color: darken(#fff, 30%)
@@ -665,10 +674,93 @@ footer
 					padding-left: 10px
 				&:hover
 					color: $accent-color
+			.wrap-tag_share
+				margin-top: 45px
+				padding: 40px 0
+				border-top: 1px solid lighten(#1f2225, 80%)
+				border-bottom: 1px solid lighten(#1f2225, 80%)
+				.tags,.share
+					.title-tag
+						float: left
+						display: inline-block
+						color: #1f2225
+						font: 16px "RobotoBold", sans-serif
+						text-transform: uppercase
+						padding: 2%
+					.cloud-tag 
+						.tag
+							float: left
+							padding: 6px 14px
+							font: 13px "RobotoCondensedRegular", sans-serif
+							border: 1px solid lighten(#1f2225, 80%)
+							margin: 4px
+							cursor: pointer
+							&:hover 
+								border: 1px solid #1f2225
+								color: #1f2225
+				.share
+					.icon
+						float: left
+						margin-right: 20px
+						font-size: 16px
+						width: 20px
+						height: 20px
+						padding-top: 4px
+						cursor: pointer
+						.fa-youtube
+						&:hover
+							color: red
+						.fa-facebook,.fa-foursquare
+							&:hover
+								color: blue
+						.fa-instagram
+							&:hover
+								color: blue
+			.title-rp
+				color: #1f2225
+				font: 16px "RobotoBold", sans-serif
+				text-transform: uppercase
+				margin: 40px 0
+				width: 100%	
+			.item 
+				width: 350px
+				height: 480px
+				display: flex 
+				flex-flow: row wrap 
+				.images 
+					flex: 1 100%
+					background-color: #eee
+					width: 300px
+					height: 187px
+				.date 
+					flex: 1 auto
+					width: 50px
+					height: 70px
+					background-color: $accent-color
+					margin-right: 29px
+					text-align: center
+				.item-head 
+					flex: 4 auto
+					width: 270px
+					height: 70px
+					border-bottom: 1px solid darken(#fff, 30%)
+					text-align: left
+					text-transform: uppercase
+				.item-caption 
+					font-size: 13px
+					color: darken(#fff, 30%)
+				.options
+					font-size: 13px
+					color: darken(#fff, 30%)
+					span 
+						padding-right: 20px
+					i 
+					 padding-right: 8px				
 //contact.html
 .contacts
 	color: #1f2225
 	margin: 80px 0 140px 0
+	width: 100%
 	.form
 		width: 540px
 		height: 100%	
@@ -705,4 +797,48 @@ footer
 			width: 100%
 			outline: none
 	.other
-					
+		margin-left: 50px
+		.item
+			margin-top: 60px 
+			i 
+				font-size: 21px 
+				color: $accent-color
+				display: inline-block
+				margin-right: 20px
+				float: left
+			.lines
+				margin-left: 40px
+				.fline	
+					font: 13px "RobotoBold", sans-serif
+				.twline 	
+					font: 13px "RobotoCondensedRegular"	
+					color: lighten(#1f2225, 40%)		
+		.follow
+			margin-top: 60px 
+			margin-left: -60px
+			p 
+				font: 16px "RobotoBold", sans-serif
+				text-align: center
+			.icon
+				width: 40px
+				height: 40px
+				border-radius: 20px
+				border: 1px solid lighten(#1f2225, 70%)
+				float: right
+				margin-left: 15px
+				i 
+					font-size: 17px
+					line-height: 2.4
+					padding-left: 9px
+				.fa-youtube
+					padding-left: 12px
+					&:hover
+						color: red
+				.fa-facebook,.fa-foursquare
+					padding-left: 14px
+					&:hover
+						color: blue
+				.fa-instagram
+					padding-left: 13px		
+					&:hover
+						color: blue
