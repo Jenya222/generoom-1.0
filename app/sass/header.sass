@@ -11,21 +11,26 @@
 
 body 
 	font-size: 16px
-	min-width: 320px
+	min-width: 360px
 	position: relative
 	line-height: 1.6
 	font-family: "RobotoRegular", sans-serif
 	overflow-x: hidden
 	color: #fff
 	height: 100%
-
+	margin: 0
+	padding: 0
+.container
+	padding-left: 5px
+.row 
+	margin-right: 0
 .hidden
 		display: none
 
 .clearfix
-	content: "";
-	display: table;
-	clear: both;
+	content: ""
+	display: table
+	clear: both
 strong, b
 	font-family: "RobotoBold", sans-serif
 	font-weight: normal
@@ -99,7 +104,7 @@ button
 			z-index: 3
 			.owl-stage
 				.owl-item
-					min-height: 500px
+					height: 100vh
 					.item
 						background-size: cover
 						height: 100%

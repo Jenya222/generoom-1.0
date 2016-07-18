@@ -27,24 +27,8 @@ $(document).ready(function(){
             loop: false
         }
     }
-})	
-  	 });
-
-
-
-$(document).ready(function(){
-      $('.owl-item').css({
-        height: $(window).height() + 'px'
-      });
-    
- });   
-$(window).resize(); 
-$(window).resize(function(){
-	  $('.owl-item').css({
-	    height: $(window).height() + 'px'
-	  });
- });
-
+});
+   });
 
 $(function(){
 	$('.top-line-menu').slicknav({
@@ -54,6 +38,14 @@ $(function(){
 	});
 });
 
+ 
+$(document).ready(function() {
+    $("body").on("click", "a.anch", function(){
+    var idtop = $($(this).attr("href")).offset().top;
+    $('html,body').animate({scrollTop: idtop}, 1500);
+    return false;
+});
+  });
 
    
 ymaps.ready(init);
@@ -81,22 +73,33 @@ function init(){
 
 //faq.html answer block
 $(document).ready(function(){
+     $(".open-answer>.fa-plus").click(function(){
+      $(this).parent().parent().next().fadeIn(1000);
+      $(this).parent().parent().parent().animate(
+        {marginBottom:"3%"},
+        {
+          duration: 1000, 
+          specialEasing: {
+            marginBottom: 'linear',
+         }
+        });
+      $(this).css("display", "none");
+      $(this).next().css("display", "block");
 
-   $(".open-answer>.fa-plus").click(function(){
-      $(this).removeClass("fa-plus")
-      $(this).addClass("fa-minus")
-      $(this).css("display", "block")
-      $(this).change(function(){
-
-      $(".open-answer>.fa-minus").click(function(){
-            $(this).removeClass("fa-minus")
-            $(this).addClass("fa-plus")
-            $(this).parent().parent().next().hide(1000);
-          });
+       });
 
 });
-      $(this).parent().parent().next().show(1000);
-
-      });
-
+$(document).ready(function(){
+    $(".open-answer>.fa-minus").click(function(){
+          $(this).parent().parent().parent().animate({marginBottom:"0"},
+        {
+          duration: 1000, 
+          specialEasing: {
+            marginBottom: 'linear',
+         }
+        });
+          $(this).css("display", "none")
+          $(this).prev().css("display", "block")
+          $(this).parent().parent().next().fadeOut(1000);
+        });
 });
