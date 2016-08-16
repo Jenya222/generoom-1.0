@@ -426,20 +426,24 @@ footer {
   font: 13px "RobotoRegular", sans-serif; }
   footer .anch_goto {
     display: none;
-    border: 2px solid #b3b3b3;
+    border: 3px solid #b3b3b3;
     -webkit-border-radius: 50px;
             border-radius: 50px;
-    padding: 0.5%;
-    opacity: 0.8;
+    width: 66px;
+    height: 66px;
+    opacity: 0.45;
+    padding-left: 13px;
     position: fixed;
     bottom: 50px;
     right: 50px;
-    cursor: pointer; }
-    footer .anch_goto:before {
-      content: 'НАВЕРХ'; }
+    cursor: pointer;
+    color: #b3b3b3; }
     footer .anch_goto i {
-      font-size: 3em;
-      color: #b3b3b3; }
+      font-size: 4em; }
+    footer .anch_goto:hover {
+      opacity: 0.8;
+      border: 3px solid #fb383c;
+      color: #fb383c; }
   footer .company, footer .contact, footer .subscribe, footer .gallery {
     height: auto;
     width: 100%; }
@@ -457,16 +461,17 @@ footer {
     padding-bottom: 28px; }
   footer .contact .twline i {
     padding-right: 15px; }
-  footer .gallery .wrap {
+  footer .popup-gallery .wrap {
     max-width: 345px; }
-    footer .gallery .wrap .photo {
+    footer .popup-gallery .wrap .photo {
+      display: block;
       width: 75px;
       height: 75px;
       background-color: #eee;
       margin-bottom: 4%;
       margin-right: 4%;
       float: left; }
-      footer .gallery .wrap .photo:hover {
+      footer .popup-gallery .wrap .photo:hover {
         background-color: #fb383c;
         cursor: pointer; }
   footer .line {
@@ -504,11 +509,11 @@ footer {
           padding-left: 13px; }
 
 @media screen and (max-width: 992px) {
-  .gallery {
+  .popup-gallery {
     margin-top: -145px; } }
 
 @media screen and (max-width: 768px) {
-  .gallery {
+  .popup-gallery {
     margin-top: 0; } }
 
 .description-rooms {
