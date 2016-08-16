@@ -6,3 +6,10 @@ $black-text-color: #1F2225
 $grey-text-color: #7F8387
 $BorderGreyColor: 1px solid #4c4e51
 $BlockLightColor: #ebf2f6
+@include keyframes(fadeIn) 
+	0%
+		@include transform(translateY(0px))
+	50%
+		@include transform(translateY(20px))
+	100%
+		@include transform(translateY(0px))

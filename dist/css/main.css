@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .description {
   color: #000; }
   .description .images {
@@ -515,6 +516,9 @@ footer {
     width: 100%;
     height: 460px; }
 
+.test_ang {
+  color: #000; }
+
 .booking {
   margin-bottom: 141px; }
   .booking .topline {
@@ -1026,3 +1030,159 @@ footer {
           padding-left: 13px; }
           .contacts .other .follow .icon .fa-instagram:hover {
             color: blue; }
+
+.popup-forma {
+  background-color: #eee;
+  width: 80%;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #000;
+  padding: 30px; }
+  .popup-forma input {
+    min-width: 305px; }
+  .popup-forma .closebtn {
+    margin: 20px; }
+  .popup-forma .chk-title {
+    font: 26px "RobotoRegular", sans-serif;
+    text-transform: uppercase;
+    margin: 30px; }
+  .popup-forma .chk {
+    position: relative; }
+  .popup-forma .chk, .popup-forma .chk-be, .popup-forma .chk-af {
+    margin: 28px 0 0 30px; }
+    .popup-forma .chk .checkbox, .popup-forma .chk-be .checkbox, .popup-forma .chk-af .checkbox {
+      vertical-align: top;
+      margin: 0 3px 0 0;
+      width: 17px;
+      height: 17px; }
+    .popup-forma .chk .checkbox + label, .popup-forma .chk-be .checkbox + label, .popup-forma .chk-af .checkbox + label {
+      cursor: pointer; }
+    .popup-forma .chk .checkbox:not(checked), .popup-forma .chk-be .checkbox:not(checked), .popup-forma .chk-af .checkbox:not(checked) {
+      position: absolute;
+      opacity: 0; }
+    .popup-forma .chk .checkbox:not(checked) + label, .popup-forma .chk-be .checkbox:not(checked) + label, .popup-forma .chk-af .checkbox:not(checked) + label {
+      position: relative;
+      padding: 0 0 0 60px; }
+    .popup-forma .chk .checkbox:not(checked) + label:before, .popup-forma .chk-be .checkbox:not(checked) + label:before, .popup-forma .chk-af .checkbox:not(checked) + label:before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 50px;
+      height: 26px;
+      -webkit-border-radius: 13px;
+              border-radius: 13px;
+      background: #CDD1DA;
+      -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+    .popup-forma .chk .checkbox:not(checked) + label:after, .popup-forma .chk-be .checkbox:not(checked) + label:after, .popup-forma .chk-af .checkbox:not(checked) + label:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      -webkit-border-radius: 10px;
+              border-radius: 10px;
+      background: #FFF;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+    .popup-forma .chk .checkbox:checked + label:before, .popup-forma .chk-be .checkbox:checked + label:before, .popup-forma .chk-af .checkbox:checked + label:before {
+      background: #fb383c; }
+    .popup-forma .chk .checkbox:checked + label:after, .popup-forma .chk-be .checkbox:checked + label:after, .popup-forma .chk-af .checkbox:checked + label:after {
+      left: 26px; }
+    .popup-forma .chk .checkbox:focus + label:before, .popup-forma .chk-be .checkbox:focus + label:before, .popup-forma .chk-af .checkbox:focus + label:before {
+      -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+              box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5); }
+  .popup-forma .chk-be:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 0;
+    width: 180px;
+    height: 35px;
+    background-color: rgba(235, 235, 228, 0.12);
+    -webkit-border-radius: 100px;
+            border-radius: 100px;
+    z-index: 2;
+    -webkit-box-shadow: inset 6px -7px 217px 49px rgba(242, 233, 242, 0.76);
+            box-shadow: inset 6px -7px 217px 49px rgba(242, 233, 242, 0.76); }
+  .popup-forma .chk-af:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -5px;
+    left: 0;
+    width: 180px;
+    height: 35px;
+    background-color: rgba(235, 235, 228, 0.12);
+    -webkit-border-radius: 100px;
+            border-radius: 100px;
+    z-index: 2;
+    -webkit-box-shadow: inset 6px -7px 217px 49px rgba(242, 233, 242, 0.76);
+            box-shadow: inset 6px -7px 217px 49px rgba(242, 233, 242, 0.76); }
+  .popup-forma .chk-af:after {
+    display: block;
+    content: 'ЗАНЯТО';
+    position: absolute;
+    top: 0;
+    left: 70px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    color: #fb383c;
+    font: 17px "RobotoBold",sans-serif;
+    z-index: 3; }
+  .popup-forma .form {
+    width: 100%; }
+    .popup-forma .form .title {
+      font: 26px "RobotoRegular", sans-serif;
+      text-transform: uppercase;
+      margin: 30px; }
+    .popup-forma .form input {
+      border: none;
+      border-bottom: 1px solid #d1d5d8;
+      display: inline-block;
+      padding: 20px;
+      float: left;
+      width: 100%;
+      outline: none;
+      margin-bottom: 10px; }
+    .popup-forma .form input[type=submit] {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #fb383c;
+      width: 193px;
+      height: 43px;
+      text-align: center;
+      margin-top: 40px;
+      line-height: 0.1; }
+    .popup-forma .form textarea {
+      border: none;
+      border-bottom: 1px solid #d1d5d8;
+      display: inline-block;
+      padding: 20px;
+      float: left;
+      width: 100%;
+      outline: none;
+      resize: none; }
+  .popup-forma .metainfo {
+    width: 100%; }
+    .popup-forma .metainfo .title {
+      font: 26px "RobotoRegular", sans-serif;
+      text-transform: uppercase;
+      margin: 30px; }
+    .popup-forma .metainfo input {
+      border: none;
+      border-bottom: 1px solid #d1d5d8;
+      display: inline-block;
+      padding: 20px;
+      float: left;
+      width: 100%;
+      outline: none;
+      margin-bottom: 10px; }

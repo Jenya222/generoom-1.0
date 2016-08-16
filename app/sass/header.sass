@@ -37,7 +37,9 @@ strong, b
 h1, h2, h3, h4, h5, h6 
 	font-family: "RobotoCondensedRegular", sans-serif
 	text-transform: uppercase
-
+.zanyato
+	color: $accent-color
+	
 .main-head
 	background-color: $main-color
 	position: absolute
@@ -224,9 +226,30 @@ button
 					
 				.owl-dot.active
 					span
-						background: $accent-color		
-					
-						
+						background: $accent-color	
+
+		.wrap_icon
+			position: absolute
+			top: 800px
+			left: 46.5%
+			z-index: 3
+			height: 50px
+			.text 
+				text-transform: uppercase
+				text-align: center
+				color: #fff
+			.icon
+				display: block
+				animation-name: fadeIn
+				animation-duration: 1.7s
+				animation-iteration-count: infinite
+			.anch_more
+				cursor: pointer
+				i 
+					color: $accent-color
+					font-size: 7em
+					transform: rotate(90deg)
+	
 //toogle menu
 
 .slicknav_menu 

@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
   	items:1,
-  	autoplay: false,
+  	autoplay: true,
   	autoplayTimeout:5000,
   	dots:true,
   	lazyLoad: true,
@@ -28,6 +28,32 @@ $(document).ready(function(){
         }
     }
 });
+
+  $(".owl-caruosel-reviews").owlCarousel({
+      items: 1,
+      dots: false,
+      responsiveClass: true,
+      navContainer: '.nav-container-reviews',
+      navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+      responsive:{
+          0:{
+              items:1,
+              nav: true,
+              dots: false
+          },
+          600:{
+              items:1,
+              nav: true,
+              dots: true
+          },
+          1000:{
+              items:1,
+              nav: true,
+              loop: false
+          }
+      }
+});
+
    });
 
 $(function(){
@@ -47,7 +73,67 @@ $(document).ready(function() {
 });
   });
 
+$(document).ready(function() {
+    $("body").on("click", ".anch_more", function(){
+    var idtop_more = $($(this).attr("href")).offset().top;
+    $('html,body').animate({scrollTop: idtop_more}, 1500);
+    return false;
+});
+  });
+
+$(document).ready(function() {
+    $("body").on("click", ".anch_goto", function(){
+    var idtop_goto = $($(this).attr("href")).offset().top;
+    $('html,body').animate({scrollTop: idtop_goto}, 1500);
+    return false;
+});
+  });
    
+//counter
+$(document).ready(function() {
+$('.reviews>.wrapper').viewportChecker({
+  callbackFunction: function(elem, action){
+    var time = 4;
+    $('.num').each(function(){
+      var i = 1,
+          num = $(this).data('num'),
+          step = 1500 * time / num,
+          that = $(this),
+          int = setInterval(function(){
+            if (i <= num) {
+              that.html(i);
+            }
+            else {
+              clearInterval(int);
+            }
+            i++;
+          },step);
+});
+},
+
+});
+
+   });
+$('.reviews>.wrapper').scroll(function() {
+  $(body).css('background-color','red');
+var time = 4;
+$('.num').each(function(){
+  var i = 1,
+      num = $(this).data('num'),
+      step = 1000 * time / num,
+      that = $(this),
+      int = setInterval(function(){
+        if (i <= num) {
+          that.html(i);
+        }
+        else {
+          clearInterval(int);
+        }
+        i++;
+      },step);
+});
+  });
+
 ymaps.ready(init);
 var myMap, 
     myPlacemark;
@@ -102,4 +188,60 @@ $(document).ready(function(){
           $(this).prev().css("display", "block")
           $(this).parent().parent().next().fadeOut(1000);
         });
+});
+
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});
+
+//sozdanie zayavki
+$(document).ready(function(){
+   $(".open-popup-link").click(function(){
+    var title = $('.quest-title').html();
+    var date = $(this).parent().prevAll('.date').html();
+    var month = $('.month').attr('data-monthofyear');
+    var year = $('.year').html();
+    var address = $('.address').html();
+    var fulldate = date+'.'+month+'.'+year;
+    $("[name='quest-date']").val(fulldate);
+    $("[name='quest-title']").val(title);
+    $("[name='quest-address']").val(address);  
+    var attrCheck = $(this).attr('data-chekbox');
+    attrCheck = attrCheck.split(',');
+    for(i = 0; i <= attrCheck[i] ; i++)
+    {
+       $('#checkbox'+i).parent().addClass('chk-af');
+    };  
+  });
+
+  $('.checkbox').click(function(){
+      $(this).parent().siblings('.chk').addClass('chk-be');
+      if($(this).is(':checked'))
+      {
+        coti = $(this).next().html();
+        coti = coti.split('-');
+        $("[name='quest-time']").val(coti[0]);
+        $("[name='quest-cost']").val(coti[1]);
+      }
+        else if($(this).attr('checked') != 'checked')
+           {
+              $(this).parent().siblings().removeClass('chk-be');
+              $("[name='quest-time']").val('');
+              $("[name='quest-cost']").val('');
+              
+            }
+
+    });
+
+   $('.mfp-close').click(function(){
+      if($('.checkbox').is(':checked'))
+      {
+        $("[name='quest-time']").val('');
+        $("[name='quest-cost']").val('');
+      }
+      $("input:checkbox").removeAttr("checked");
+      $('.chk').removeClass('chk-be chk-af');
+    });
+
 });

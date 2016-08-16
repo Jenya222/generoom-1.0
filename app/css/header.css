@@ -3,6 +3,28 @@
 @import url(../css/owl.carousel.css);
 @import url(../css/owl.theme.default.css);
 @import url(../css/slicknav.min.css);
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(20px); }
+  100% {
+    -webkit-transform: translateY(0px); } }
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px); } }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -40,6 +62,9 @@ strong, b {
 h1, h2, h3, h4, h5, h6 {
   font-family: "RobotoCondensedRegular", sans-serif;
   text-transform: uppercase; }
+
+.zanyato {
+  color: #fb383c; }
 
 .main-head {
   background-color: #090c0e;
@@ -229,6 +254,32 @@ button {
             background: #7F8387; }
         .main-slider .slider-nav .owl-dots-container .owl-dots .owl-dot.active span {
           background: #fb383c; }
+    .main-slider .slider-nav .wrap_icon {
+      position: absolute;
+      top: 800px;
+      left: 46.5%;
+      z-index: 3;
+      height: 50px; }
+      .main-slider .slider-nav .wrap_icon .text {
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff; }
+      .main-slider .slider-nav .wrap_icon .icon {
+        display: block;
+        -webkit-animation-name: fadeIn;
+                animation-name: fadeIn;
+        -webkit-animation-duration: 1.7s;
+                animation-duration: 1.7s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite; }
+      .main-slider .slider-nav .wrap_icon .anch_more {
+        cursor: pointer; }
+        .main-slider .slider-nav .wrap_icon .anch_more i {
+          color: #fb383c;
+          font-size: 7em;
+          -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg); }
 
 .slicknav_menu {
   display: none; }

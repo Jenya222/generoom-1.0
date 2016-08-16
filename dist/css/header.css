@@ -41,6 +41,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "RobotoCondensedRegular", sans-serif;
   text-transform: uppercase; }
 
+.zanyato {
+  color: #fb383c; }
+
 .main-head {
   background-color: #090c0e;
   position: absolute;

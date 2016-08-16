@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="ru">
+<html lang="ru"  ng-app="bookQuest">
 
 <head>
      <meta charset="utf-8">
@@ -12,7 +12,10 @@
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/
+	angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 	
 
 </head>
@@ -130,7 +133,7 @@
 				<div class="container">
 					<div class="row">
 					<div class="col-lg-8">
-						<div class="col-lg-12"><h2>Horror Manifold</h2></div>
+						<div class="col-lg-12"><h2 class="quest-title">Астероид</h2></div>
 						<div class="col-lg-12"><p class="caption">You are group of rescuers search engines. Many weeks you were investigating a mysterious case. It all started when the couple Smiths adopted three children - twins and two ten-year-old their little sister. These children were found in an abandoned sewage and nothing about himself remembered. After a few happy months in the Smith family, one night, all three of them disappeared. Without waiting for the police rushed to search for the Smiths, and traces of children's feet on the wet ground led them to an abandoned reservoir. Since then, no one saw no children or their foster parents. And now you're standing at the entrance to the collector, and you have to go down and find out what secrets it hides.</p></div>
 						<div class="col-lg-12">	
 						<p class="intro">Minimum age of participants: 16 years.
@@ -147,7 +150,7 @@
 							<span><i class="fa fa-clock-o" aria-hidden="true"></i>2-4 People</span>
 							<span><i class="fa fa-users" aria-hidden="true"></i>60 Minutes	</span>
 							
-							<span><i class="fa fa-map-marker" aria-hidden="true"></i> 55 Wall Street</span>
+							<span class="quest-address"><i class="fa fa-map-marker" aria-hidden="true"></i><span class="address">м.Владимирская, ул.Марата д. 666</span></span>
 							
 							</div>
 							<div class="order"><a href="#anch" class="anch button">Забронировать</a>
@@ -161,15 +164,30 @@
 			<div id="map">
 				
 			</div>
-		</section>		
+		</section>	
+
+		<section class="test_ang">
+		<div class="container" >
+				<div class="row"  ng-repeat="d in bookCtrl.items">
+					<h1>{{d.day}}</h1>
+					<h1>{{d.available}}</h1>
+				</div>
+		</div>
 		
-		<section class="booking" id="anch">
+		</section>
+
+
+
+
+
+
+		<section class="booking" id="anch" >
 			<div class="container">
 				<div class="row">
 						<div class="col-lg-12 topline">
 							<div class="wrap-topline clearfix">
 								<div class="nav-prev"><i class='fa fa-angle-left'></i></div>
-								<div class="month">December <span class="year">2015</span>
+								<div class="month" data-monthofyear="12">December <span class="year">2015</span>
 								</div>
 								<div class="nav-next">
 								<i class='fa fa-angle-right'></i>
@@ -177,19 +195,18 @@
 							</div>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week">Понедельник</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week">Вторник</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week">Среда</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week">Четверг</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week">Пятница</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week end">Суббота</div>
-							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week end">Воскресенье</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week" data-weekday="1">Понедельник</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week" data-weekday="2">Вторник</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week" data-weekday="3">Среда</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week" data-weekday="4">Четверг</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week" data-weekday="5">Пятница</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week end" data-weekday="6">Суббота</div>
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 week end" data-weekday="7">Воскресенье</div>
 						</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="dayweek">Пн</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-notavail">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Всё занято</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -198,7 +215,7 @@
 								</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-notavail">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Всё занято</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -207,7 +224,16 @@
 								</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
+										<div class="avail">Available: 9</div>
+										<div class="order">
+											<a href="#"  data-mfp-src="#test-popup"  class="button open-popup-link">	Забронировать</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
+									<div class="sheet-normal">
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -216,7 +242,7 @@
 								</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -225,7 +251,7 @@
 								</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -234,16 +260,7 @@
 								</div>
 								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" data-weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -252,14 +269,98 @@
 								</div>
 							</div>
 
-						
-						
-						
+<div id="test-popup" class="white-popup mfp-hide">
+<div class="container popup-forma">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="closebtn">
+			<button title="Закрыть форму" type="button" class="mfp-close">x</button>
+			</div>
+		</div>
+		<div class="col-lg-3">
+			<div class="check-time">
+			<p class="chk-title">
+				1. Выберите время
+			</p>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox" />
+				<label for="checkbox">11:00 - 1500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox1" />
+				<label for="checkbox1">12:30 - 1500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox2" />
+				<label for="checkbox2">14:00 - 1500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox3" />
+				<label for="checkbox3">15:30 - 1500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox4" />
+				<label for="checkbox4">17:00 - 2000 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox5" />
+				<label for="checkbox5">18:30 - 2000 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox6" />
+				<label for="checkbox6">20:00 - 2500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox6" />
+				<label for="checkbox6">21:30 - 2500 руб</label>
+			</div>
+			<div class="chk">
+				<input type="checkbox" class="checkbox" id="checkbox6" />
+				<label for="checkbox6">23:00 - 2500 руб</label>
+			</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="metainfo">
+				<div class="title">
+					2. Данные о заказе
+				</div>
+					<form action="">
+						<p>Название квеста</p>
+						<input type="text" name="quest-title" value="" disabled>
+						<p>Дата</p>
+						<input type="text" name="quest-date" value="" disabled>
+						<p>Время</p>
+						<input type="text" name="quest-time" value="" disabled>
+						<p>Стоимость</p>
+						<input type="text" name="quest-cost" value="" disabled>
+						<p>Адрес</p>
+						<input type="text" name="quest-address" value="" disabled>
+					</form>
+			</div>
+		</div>
+		<div class="col-lg-5">
+				<div class="form">
+					<div class="title">
+					  3. Заполните заявку
+					</div>
+						<form action="">
+							<input type="text" name="Name" placeholder="Ваше имя">
+							<input type="text" name="Email" placeholder="Ваш Email">
+							<input type="text" name="Telephone" placeholder="Контактный телефон">
+							<textarea  cols="4" name="Message" placeholder="Комментарий к заявке"></textarea>
+							<input type="submit" class="button"></input>
+						</form>
+			</div>
+		</div>
+	</div>
+</div>
+   
+</div>
 							<div class="col-lg-12 row-week">
-								<div class="dayweek">Вт</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -268,7 +369,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -277,7 +378,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -286,7 +387,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -295,7 +396,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -304,217 +405,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						
-
-						
-							<div class="col-lg-12 row-week">
-								<div class="dayweek">Ср</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						
-
-				
-							<div class="col-lg-12 row-week">
-								<div class="dayweek">Чт</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						
-						
-						
-							<div class="col-lg-12 row-week">
-								<div class="dayweek">Пт</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -523,7 +414,7 @@
 								</div>
 								<div class="col-lg-1 element">
 									<div class="sheet-nextmonth">
-										<div class="date">02</div>
+										<div class="date" weekday="">02</div>
 										<div class="avail">Available: 9</div>
 										<div class="order">
 											<a href="#" class="button">	Забронировать</a>
@@ -531,140 +422,7 @@
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-lg-12 row-week">
-								<div class="dayweek">Сб</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-nextmonth">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-lg-12 row-week">
-								<div class="dayweek">Вс</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-normal">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 element">
-									<div class="sheet-nextmonth">
-										<div class="date">02</div>
-										<div class="avail">Available: 9</div>
-										<div class="order">
-											<a href="#" class="button">	Забронировать</a>
-										</div>
-									</div>
-								</div>
-							</div>
+
 				</div>
 			</div>
 		</section>		
@@ -738,7 +496,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+	
 	</body>
 </html>
