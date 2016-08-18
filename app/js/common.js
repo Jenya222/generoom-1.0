@@ -190,15 +190,55 @@ $(document).ready(function() {
 
 $('.open-popup-link').magnificPopup({
   type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  closeOnBgClick: false
 });
+//booking
+$(document).ready(function(){
+  var sheetHeight = $('.sheet-normal2').parent().height();
+  $('.sheet-notavail2,.sheet-nextmonth2').height(sheetHeight);
+  }); 
 
+$(document).ready(function(){
+  $(window).resize(function(){
+    if(window.matchMedia('(max-width: 968px)').matches)
+    {
+        $('.avail2').css('display','none');
+        $('.sheet-notavail2').hide();
+        $('.sheet-nextmonth2').hide();
+        $('.button2').html('<i class="fa fa-play" aria-hidden="true"></i>');
+        $("[data-weekday='1']").text('Пн');
+        $("[data-weekday='2']").text('Вт');
+        $("[data-weekday='3']").text('Ср');
+        $("[data-weekday='4']").text('Чт');
+        $("[data-weekday='5']").text('Пт');
+        $("[data-weekday='6']").text('Сб');
+        $("[data-weekday='7']").text('Вс');
+    }
+    else
+    {
+      $('.avail2').css('display','block');
+      $('.sheet-nextmonth2').children('.avail2').css('display','none');
+      $('.sheet-notavail2').show();
+      $('.sheet-nextmonth2').show();
+      $('.button2').html('Забронировать');
+      $("[data-weekday='1']").text('Понедельник');
+      $("[data-weekday='2']").text('Вторник');
+      $("[data-weekday='3']").text('Среда');
+      $("[data-weekday='4']").text('Четверг');
+      $("[data-weekday='5']").text('Пятница');
+      $("[data-weekday='6']").text('Суббота');
+      $("[data-weekday='7']").text('Воскресенье');
+    }
+     }); 
+  }); 
+  
 //sozdanie zayavki
 $(document).ready(function(){
    $(".open-popup-link").click(function(){
     var title = $('.quest-title').html();
-    var date = $(this).parent().prevAll('.date').html();
-    var month = $('.month').attr('data-monthofyear');
+    var date = $(this).parent().prevAll('.date2').children('.date2-num').html();
+    var month = $('.month2').attr('data-monthofyear');
     var year = $('.year').html();
     var address = $('.address').html();
     var fulldate = date+'.'+month+'.'+year;
@@ -241,7 +281,6 @@ $(document).ready(function(){
       $("input:checkbox").removeAttr("checked");
       $('.chk').removeClass('chk-be chk-af');
     });
-
 });
 
 ymaps.ready(init);
