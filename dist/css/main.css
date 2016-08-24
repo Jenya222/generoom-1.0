@@ -399,6 +399,8 @@
       color: #b3b3b3; }
       .news .item .options span {
         padding-right: 5%; }
+      .news .item .options .views {
+        padding-right: 0; }
       .news .item .options i {
         padding-right: 8px; }
   .news .all-post {
@@ -731,7 +733,9 @@ footer {
         max-width: 348px; }
         .booking2 .booking2-wrap .wrap-topline2 .topline2 .month2 {
           float: left;
-          margin: 0 8%; }
+          margin: 0 8%;
+          width: 100%;
+          max-width: 216.7px; }
         .booking2 .booking2-wrap .wrap-topline2 .topline2 .nav-prev2, .booking2 .booking2-wrap .wrap-topline2 .topline2 .nav-next2 {
           max-width: 36px;
           width: 9%;

@@ -192,15 +192,12 @@ var oneHour = 1000 * 60 * 60;//милисекунды*минуты*часы
 var oneDay = oneHour * 24;//сутки
 var nextMonth = new Date(bookYear, bookMonth + 1, 1);
 
-//var last_day = Math.ceil((nextMonth.getTime() - first_day.getTime() - oneHour)/oneDay);
-
 var key = bookMonth+list;
  key = parseInt(key);
 var last_day = 33 - new Date(bookYear, key, 33).getDate();
 
 var month_array = new Array ("Январь","Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь","Ноябрь", "Декабрь");
 
-//'<div class="element2"><div class="sheet-normal2"><div class="date2" data-weekday=""><div class="date2-num">1</div></div><div class="avail2">Available: 9</div><div class="order2"><a href="#"  data-mfp-src="#test-popup"  class="button2 open-popup-link" data-chekbox="2,3,4,5,6">  Забронировать</a></div></div></div>' 
 var element = '';
 var gh = '<div class="element2"><div class="sheet-nextmonth"><div class="date" weekday="">02</div><div class="avail">Available: 9</div><div class="order"><a href="#"  data-mfp-src="#test-popup"  class="button open-popup-link">  Забронировать</a></div></div></div>';
 
@@ -222,86 +219,26 @@ for(i=1;i <= last_day;i++)
 }
 
 $('.element2-wrap').html(element);
-  var sheetHeight = $('.sheet-normal2').height();
-  $('.sheet-notavail2,.sheet-nextmonth2').height(sheetHeight);
 
-};
+//изменение окна пустого блока
+var sheetHeight = $('.sheet-normal2').height();
+$('.sheet-notavail2,.sheet-nextmonth2').height(sheetHeight);
 
-var m2 = $('.month2').attr("data-monthofyear");;
-
-
-$('.nav-next2').click(function(){
-  a+1;
-  if(m2 <= 9){
-  m2 = $('.month2').attr("data-monthofyear");
- c = calendar( new Date().getFullYear(), m2, 1);
-}
-});
-
-
-$('.nav-prev2').click(function(){
-  a-1;
-  if(new Date().getUTCMonth()+2 <= m2){
-  m2 = $('.month2').attr("data-monthofyear");
-  c = calendar( new Date().getFullYear(), m2, -1);
-}
-});
-
-
-});
-
-
-
-$(document).ready(function(){
-
+//вызов плагина magnific
 $('.open-popup-link').magnificPopup({
   type:'inline',
   midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   closeOnBgClick: false
 });
 
-  }); 
 
-$(document).ready(function(){
-   $(window).resize(function(){
-    if(window.matchMedia('(max-width: 968px)').matches)
-    {
-        $('.avail2').css('display','none');
-        $('.sheet-notavail2').hide();
-        $('.sheet-nextmonth2').hide();
-        $('.button2').html('<i class="fa fa-play" aria-hidden="true"></i>');
-        $("[data-weekday='1']").text('Пн');
-        $("[data-weekday='2']").text('Вт');
-        $("[data-weekday='3']").text('Ср');
-        $("[data-weekday='4']").text('Чт');
-        $("[data-weekday='5']").text('Пт');
-        $("[data-weekday='6']").text('Сб');
-        $("[data-weekday='7']").text('Вс');
-    }
-    else
-    {
-      $('.avail2').css('display','block');
-      $('.sheet-nextmonth2').children('.avail2').css('display','none');
-      $('.sheet-notavail2').show();
-      $('.sheet-nextmonth2').show();
-      $('.button2').html('Забронировать');
-      $("[data-weekday='1']").text('Понедельник');
-      $("[data-weekday='2']").text('Вторник');
-      $("[data-weekday='3']").text('Среда');
-      $("[data-weekday='4']").text('Четверг');
-      $("[data-weekday='5']").text('Пятница');
-      $("[data-weekday='6']").text('Суббота');
-      $("[data-weekday='7']").text('Воскресенье');
-    }
-     }); 
-  }); 
   
 //sozdanie zayavki
-$(document).ready(function(){
    $(".open-popup-link").click(function(){
     var title = $('.quest-title').html();
     var date = $(this).parent().prevAll('.date2').children('.date2-num').html();
     var month = $('.month2').attr('data-monthofyear');
+    month = parseInt(month)+1;
     var year = $('.year').html();
     var address = $('.address').html();
     var fulldate = date+'.'+month+'.'+year;
@@ -344,7 +281,96 @@ $(document).ready(function(){
       $("input:checkbox").removeAttr("checked");
       $('.chk').removeClass('chk-be chk-af');
     });
+//медиа запрос если ширина окна максимум 968
+if(window.matchMedia('(max-width: 968px)').matches)
+    {
+        $('.avail2').css('display','none');
+        $('.sheet-notavail2').hide();
+        $('.sheet-nextmonth2').hide();
+        $('.button2').html('<i class="fa fa-play" aria-hidden="true"></i>');
+        $("[data-weekday='1']").text('Пн');
+        $("[data-weekday='2']").text('Вт');
+        $("[data-weekday='3']").text('Ср');
+        $("[data-weekday='4']").text('Чт');
+        $("[data-weekday='5']").text('Пт');
+        $("[data-weekday='6']").text('Сб');
+        $("[data-weekday='7']").text('Вс');
+    }
+    else
+    {
+      $('.avail2').css('display','block');
+      $('.sheet-nextmonth2').children('.avail2').css('display','none');
+      $('.sheet-notavail2').show();
+      $('.sheet-nextmonth2').show();
+      $('.button2').html('Забронировать');
+      $("[data-weekday='1']").text('Понедельник');
+      $("[data-weekday='2']").text('Вторник');
+      $("[data-weekday='3']").text('Среда');
+      $("[data-weekday='4']").text('Четверг');
+      $("[data-weekday='5']").text('Пятница');
+      $("[data-weekday='6']").text('Суббота');
+      $("[data-weekday='7']").text('Воскресенье');
+    }
+
+};
+
+var m2 = $('.month2').attr("data-monthofyear");;
+
+
+$('.nav-next2').click(function(){
+  a+1;
+  if(m2 <= 9){
+  m2 = $('.month2').attr("data-monthofyear");
+ c = calendar( new Date().getFullYear(), m2, 1);
+}
 });
+
+
+$('.nav-prev2').click(function(){
+  a-1;
+  if(new Date().getUTCMonth()+2 <= m2){
+  m2 = $('.month2').attr("data-monthofyear");
+  c = calendar( new Date().getFullYear(), m2, -1);
+}
+});
+//изменение отображения при ресайзе
+  $(window).resize(function(){
+    if(window.matchMedia('(max-width: 968px)').matches)
+    {
+        $('.avail2').css('display','none');
+        $('.sheet-notavail2').hide();
+        $('.sheet-nextmonth2').hide();
+        $('.button2').html('<i class="fa fa-play" aria-hidden="true"></i>');
+        $("[data-weekday='1']").text('Пн');
+        $("[data-weekday='2']").text('Вт');
+        $("[data-weekday='3']").text('Ср');
+        $("[data-weekday='4']").text('Чт');
+        $("[data-weekday='5']").text('Пт');
+        $("[data-weekday='6']").text('Сб');
+        $("[data-weekday='7']").text('Вс');
+    }
+    else
+    {
+      $('.avail2').css('display','block');
+      $('.sheet-nextmonth2').children('.avail2').css('display','none');
+      $('.sheet-notavail2').show();
+      $('.sheet-nextmonth2').show();
+      $('.button2').html('Забронировать');
+      $("[data-weekday='1']").text('Понедельник');
+      $("[data-weekday='2']").text('Вторник');
+      $("[data-weekday='3']").text('Среда');
+      $("[data-weekday='4']").text('Четверг');
+      $("[data-weekday='5']").text('Пятница');
+      $("[data-weekday='6']").text('Суббота');
+      $("[data-weekday='7']").text('Воскресенье');
+    }
+     }); 
+
+
+});
+
+
+
 
 ymaps.ready(init);
 var myMap, 
