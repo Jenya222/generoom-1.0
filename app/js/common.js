@@ -32,26 +32,10 @@ $(document).ready(function(){
   $(".owl-caruosel-reviews").owlCarousel({
       items: 1,
       dots: false,
+      nav: true,
       responsiveClass: true,
       navContainer: '.nav-container-reviews',
       navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-      responsive:{
-          0:{
-              items:1,
-              nav: true,
-              dots: false
-          },
-          600:{
-              items:1,
-              nav: true,
-              dots: true
-          },
-          1000:{
-              items:1,
-              nav: true,
-              loop: false
-          }
-      }
 });
 
    });
@@ -188,19 +172,98 @@ $(document).ready(function() {
   });
 });
 
+
+//booking
+$(document).ready( function(){
+  var c;
+  var a = 0;
+if(a == 0){
+ calendar(new Date().getFullYear(), new Date().getUTCMonth(), 0);
+}
+else
+{
+  c;
+}
+
+  function calendar(bookYear, bookMonth, list){
+bookMonth = parseInt(bookMonth);
+var first_day = new Date(bookYear,bookMonth,1);
+var oneHour = 1000 * 60 * 60;//милисекунды*минуты*часы
+var oneDay = oneHour * 24;//сутки
+var nextMonth = new Date(bookYear, bookMonth + 1, 1);
+
+//var last_day = Math.ceil((nextMonth.getTime() - first_day.getTime() - oneHour)/oneDay);
+
+var key = bookMonth+list;
+ key = parseInt(key);
+var last_day = 33 - new Date(bookYear, key, 33).getDate();
+
+var month_array = new Array ("Январь","Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь","Ноябрь", "Декабрь");
+
+//'<div class="element2"><div class="sheet-normal2"><div class="date2" data-weekday=""><div class="date2-num">1</div></div><div class="avail2">Available: 9</div><div class="order2"><a href="#"  data-mfp-src="#test-popup"  class="button2 open-popup-link" data-chekbox="2,3,4,5,6">  Забронировать</a></div></div></div>' 
+var element = '';
+var gh = '<div class="element2"><div class="sheet-nextmonth"><div class="date" weekday="">02</div><div class="avail">Available: 9</div><div class="order"><a href="#"  data-mfp-src="#test-popup"  class="button open-popup-link">  Забронировать</a></div></div></div>';
+
+$('.mon').text(month_array[key]);
+$('.year').text(bookYear);
+
+$('.month2').attr("data-monthofyear", key);
+
+var dayByWeek = new Date(bookYear, key, 1).getDay();
+
+
+for(i=1;i<dayByWeek;i++){
+  element +='<div class="element2"><div class="sheet-nextmonth2"><div class="date2" data-weekday=""></div><div class="avail2">Available: 9</div><div class="order2"><a href="#"  data-mfp-src="#test-popup"  class="button2 open-popup-link">  Забронировать</a></div></div></div>';
+}
+
+for(i=1;i <= last_day;i++)
+{
+  element +='<div class="element2"><div class="sheet-normal2"><div class="date2" data-weekday=""><div class="date2-num">'+i+'</div></div><div class="avail2">Available: 9</div><div class="order2"><a href="#"  data-mfp-src="#test-popup"  class="button2 open-popup-link" data-chekbox="2,3,4,5,6">  Забронировать</a></div></div></div>';
+}
+
+$('.element2-wrap').html(element);
+  var sheetHeight = $('.sheet-normal2').height();
+  $('.sheet-notavail2,.sheet-nextmonth2').height(sheetHeight);
+
+};
+
+var m2 = $('.month2').attr("data-monthofyear");;
+
+
+$('.nav-next2').click(function(){
+  a+1;
+  if(m2 <= 9){
+  m2 = $('.month2').attr("data-monthofyear");
+ c = calendar( new Date().getFullYear(), m2, 1);
+}
+});
+
+
+$('.nav-prev2').click(function(){
+  a-1;
+  if(new Date().getUTCMonth()+2 <= m2){
+  m2 = $('.month2').attr("data-monthofyear");
+  c = calendar( new Date().getFullYear(), m2, -1);
+}
+});
+
+
+});
+
+
+
+$(document).ready(function(){
+
 $('.open-popup-link').magnificPopup({
   type:'inline',
   midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   closeOnBgClick: false
 });
-//booking
-$(document).ready(function(){
-  var sheetHeight = $('.sheet-normal2').parent().height();
-  $('.sheet-notavail2,.sheet-nextmonth2').height(sheetHeight);
+
   }); 
 
 $(document).ready(function(){
-  $(window).resize(function(){
+   $(window).resize(function(){
     if(window.matchMedia('(max-width: 968px)').matches)
     {
         $('.avail2').css('display','none');

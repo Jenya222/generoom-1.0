@@ -127,48 +127,50 @@
 	.owl-caruosel-reviews
 		display: block
 		height: auto
-		.slide-wrap-reviews
+		.owl-stage-outer
 			width: 100%
-			height: 100%
-		.images
-			margin-top: 88px
-			margin-left: 69px
-		.wrap-content
-			margin-top: 128px
-			color: #000
-			width: 550px / 600px * 100%
-			.head
-				font: 30px "RobotoBold", sans-serif
-				text-transform: uppercase
-				color: $accent-color
-				span 
-					color: #000
-			.intro
-				font: 15px "RobotoBold", sans-serif
-			.content
-				color: lighten(#000, 40%)
-				max-width: 550px
-			.name
-				font: 15px "RobotoBold", sans-serif
-				text-transform: uppercase
-			.control
-				padding-left: 0
-				margin-top: 91px
+			.slide-wrap-reviews
 				width: 100%
-				height: 40px
-				.left,.right
-					width: 36px
-					height: 36px
-					background-color: $accent-color
-					float: left
-					cursor: pointer
-					color: #fff
-					text-align: center
-					line-height: 2.1
-					&:active
-						background-color: #000
-				.right
-					margin-left: 15px
+				height: 100%
+			.images
+				margin-top: 88px
+				margin-left: 69px
+			.wrap-content
+				margin-top: 128px
+				color: #000
+				width: 550px / 600px * 100%
+				.head
+					font: 30px "RobotoBold", sans-serif
+					text-transform: uppercase
+					color: $accent-color
+					span 
+						color: #000
+				.intro
+					font: 15px "RobotoBold", sans-serif
+				.content
+					color: lighten(#000, 40%)
+					max-width: 550px
+				.name
+					font: 15px "RobotoBold", sans-serif
+					text-transform: uppercase
+				.control
+					padding-left: 0
+					margin-top: 91px
+					width: 100%
+					height: 40px
+					.left,.right
+						width: 36px
+						height: 36px
+						background-color: $accent-color
+						float: left
+						cursor: pointer
+						color: #fff
+						text-align: center
+						line-height: 2.1
+						&:active
+							background-color: #000
+					.right
+						margin-left: 15px
 	.wrapper
 		display: flex 
 		flex-flow: row wrap 
@@ -205,11 +207,13 @@
 			font: 30px "RobotoBold", sans-serif	
 			margin: 0
 	.item
-		width: 351px
+		width: 98%
+		max-width: 351px
 		height: 530px
 		display: flex 
 		flex-direction: column
 		background-color: #FFF
+		border: 4px solid #ebf2f6
 		margin: 0 auto
 		margin-bottom: 130px
 		span 
@@ -241,9 +245,7 @@
 			font-size: 13px
 			text-align: center
 		.order
-			margin-top: 90px 
-			margin-bottom: 50px
-			padding: 0 80px
+			margin: 90px auto 50px auto
 			.button
 				display: inline-block
 				color: #fff
@@ -271,7 +273,8 @@
 			font: 30px "RobotoBold", sans-serif	
 			margin: 0
 	.item 
-		width: 350px
+		width: 98%
+		max-width: 350px
 		height: 480px
 		display: flex 
 		flex-flow: row wrap 
@@ -284,7 +287,8 @@
 			height: 187px
 		.date 
 			flex: 1 auto
-			width: 50px
+			width: 9%
+			max-width: 50px
 			height: 70px
 			background-color: $accent-color
 			margin-right: 29px
@@ -298,7 +302,8 @@
 				font: 12px "RobotoBold", sans-serif
 		.item-head 
 			flex: 4 auto
-			width: 270px
+			width: 58%
+			max-width: 270px
 			height: 70px
 			border-bottom: 1px solid darken(#fff, 30%)
 			text-align: left
@@ -310,7 +315,9 @@
 			font-size: 13px
 			color: darken(#fff, 30%)
 			span 
-				padding-right: 20px
+				padding-right: 5%
+			.views
+				padding-right: 0
 			i 
 			 padding-right: 8px
 	.all-post
@@ -621,7 +628,7 @@ footer
 				letter-spacing: 2px
 				word-spacing: 2px
 				text-align: center
-				margin: 90px auto
+				margin: 60px auto
 				width: 100%
 				max-width: 348px
 				.month2	

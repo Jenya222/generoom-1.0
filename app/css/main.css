@@ -165,48 +165,50 @@
 .reviews .owl-caruosel-reviews {
   display: block;
   height: auto; }
-  .reviews .owl-caruosel-reviews .slide-wrap-reviews {
-    width: 100%;
-    height: 100%; }
-  .reviews .owl-caruosel-reviews .images {
-    margin-top: 88px;
-    margin-left: 69px; }
-  .reviews .owl-caruosel-reviews .wrap-content {
-    margin-top: 128px;
-    color: #000;
-    width: 91.66667%; }
-    .reviews .owl-caruosel-reviews .wrap-content .head {
-      font: 30px "RobotoBold", sans-serif;
-      text-transform: uppercase;
-      color: #fb383c; }
-      .reviews .owl-caruosel-reviews .wrap-content .head span {
-        color: #000; }
-    .reviews .owl-caruosel-reviews .wrap-content .intro {
-      font: 15px "RobotoBold", sans-serif; }
-    .reviews .owl-caruosel-reviews .wrap-content .content {
-      color: #666666;
-      max-width: 550px; }
-    .reviews .owl-caruosel-reviews .wrap-content .name {
-      font: 15px "RobotoBold", sans-serif;
-      text-transform: uppercase; }
-    .reviews .owl-caruosel-reviews .wrap-content .control {
-      padding-left: 0;
-      margin-top: 91px;
+  .reviews .owl-caruosel-reviews .owl-stage-outer {
+    width: 100%; }
+    .reviews .owl-caruosel-reviews .owl-stage-outer .slide-wrap-reviews {
       width: 100%;
-      height: 40px; }
-      .reviews .owl-caruosel-reviews .wrap-content .control .left, .reviews .owl-caruosel-reviews .wrap-content .control .right {
-        width: 36px;
-        height: 36px;
-        background-color: #fb383c;
-        float: left;
-        cursor: pointer;
-        color: #fff;
-        text-align: center;
-        line-height: 2.1; }
-        .reviews .owl-caruosel-reviews .wrap-content .control .left:active, .reviews .owl-caruosel-reviews .wrap-content .control .right:active {
-          background-color: #000; }
-      .reviews .owl-caruosel-reviews .wrap-content .control .right {
-        margin-left: 15px; }
+      height: 100%; }
+    .reviews .owl-caruosel-reviews .owl-stage-outer .images {
+      margin-top: 88px;
+      margin-left: 69px; }
+    .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content {
+      margin-top: 128px;
+      color: #000;
+      width: 91.66667%; }
+      .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .head {
+        font: 30px "RobotoBold", sans-serif;
+        text-transform: uppercase;
+        color: #fb383c; }
+        .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .head span {
+          color: #000; }
+      .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .intro {
+        font: 15px "RobotoBold", sans-serif; }
+      .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .content {
+        color: #666666;
+        max-width: 550px; }
+      .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .name {
+        font: 15px "RobotoBold", sans-serif;
+        text-transform: uppercase; }
+      .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control {
+        padding-left: 0;
+        margin-top: 91px;
+        width: 100%;
+        height: 40px; }
+        .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control .left, .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control .right {
+          width: 36px;
+          height: 36px;
+          background-color: #fb383c;
+          float: left;
+          cursor: pointer;
+          color: #fff;
+          text-align: center;
+          line-height: 2.1; }
+          .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control .left:active, .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control .right:active {
+            background-color: #000; }
+        .reviews .owl-caruosel-reviews .owl-stage-outer .wrap-content .control .right {
+          margin-left: 15px; }
 
 .reviews .wrapper {
   display: -webkit-box;
@@ -264,7 +266,8 @@
       font: 30px "RobotoBold", sans-serif;
       margin: 0; }
   .price .item {
-    width: 351px;
+    width: 98%;
+    max-width: 351px;
     height: 530px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -276,6 +279,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #FFF;
+    border: 4px solid #ebf2f6;
     margin: 0 auto;
     margin-bottom: 130px; }
     .price .item span {
@@ -305,9 +309,7 @@
       font-size: 13px;
       text-align: center; }
     .price .item .order {
-      margin-top: 90px;
-      margin-bottom: 50px;
-      padding: 0 80px; }
+      margin: 90px auto 50px auto; }
       .price .item .order .button {
         display: inline-block;
         color: #fff;
@@ -340,7 +342,8 @@
       font: 30px "RobotoBold", sans-serif;
       margin: 0; }
   .news .item {
-    width: 350px;
+    width: 98%;
+    max-width: 350px;
     height: 480px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -364,7 +367,8 @@
       -webkit-flex: 1 auto;
           -ms-flex: 1 auto;
               flex: 1 auto;
-      width: 50px;
+      width: 9%;
+      max-width: 50px;
       height: 70px;
       background-color: #fb383c;
       margin-right: 29px;
@@ -381,7 +385,8 @@
       -webkit-flex: 4 auto;
           -ms-flex: 4 auto;
               flex: 4 auto;
-      width: 270px;
+      width: 58%;
+      max-width: 270px;
       height: 70px;
       border-bottom: 1px solid #b3b3b3;
       text-align: left;
@@ -393,7 +398,9 @@
       font-size: 13px;
       color: #b3b3b3; }
       .news .item .options span {
-        padding-right: 20px; }
+        padding-right: 5%; }
+      .news .item .options .views {
+        padding-right: 0; }
       .news .item .options i {
         padding-right: 8px; }
   .news .all-post {
@@ -721,7 +728,7 @@ footer {
         letter-spacing: 2px;
         word-spacing: 2px;
         text-align: center;
-        margin: 90px auto;
+        margin: 60px auto;
         width: 100%;
         max-width: 348px; }
         .booking2 .booking2-wrap .wrap-topline2 .topline2 .month2 {
